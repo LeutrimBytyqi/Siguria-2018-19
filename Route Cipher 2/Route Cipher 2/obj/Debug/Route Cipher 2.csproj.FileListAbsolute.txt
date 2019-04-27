@@ -1,0 +1,20 @@
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe.config
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.pdb
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csprojAssemblyReference.cache
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.PlainTxt.resources
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.Properties.Resources.resources
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.GenerateResource.cache
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
+C:\Users\majli\source\repos\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe.config
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.pdb
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csprojAssemblyReference.cache
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.PlainTxt.resources
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.Properties.Resources.resources
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.GenerateResource.cache
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
+E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
