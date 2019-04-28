@@ -127,22 +127,25 @@ namespace Route_Cipher_2
             StringBuilder stringu = new StringBuilder();
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
-            int m = rows - 1;
-            for (int l = 2; l < (rows + 2); l++)
+            int m = rows ;
+            for (int l = 2; l <= (rows + 2); l++)
             {
                 if (l % 2 == 0)
                 {
-                    for (int j = (cols - 1); j >= 0; j--)
+                    for (int j = (cols - 2); j >= 0; j--)
                     {
-                        stringu.Append(matrica[m,j]);
+                    
+                        stringu.Append(matrica[j,m]);
+                        
                     }
                     m--;
+
                 }
                 else
                 {
-                    for (int j = 0; j <= (cols - 1); j++)
+                    for (int j = 0; j <= (cols - 2); j++)
                     {
-                        stringu.Append(matrica[m,j]);
+                        stringu.Append(matrica[j,m]);
                     }
                     m--;
                 }
