@@ -35,6 +35,7 @@
             this.btn2 = new System.Windows.Forms.RadioButton();
             this.btn3 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.key = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PlainText
@@ -57,7 +58,7 @@
             // 
             // CipherTXT
             // 
-            this.CipherTXT.Location = new System.Drawing.Point(12, 160);
+            this.CipherTXT.Location = new System.Drawing.Point(12, 203);
             this.CipherTXT.Name = "CipherTXT";
             this.CipherTXT.Size = new System.Drawing.Size(576, 22);
             this.CipherTXT.TabIndex = 3;
@@ -65,7 +66,7 @@
             // btn1
             // 
             this.btn1.AutoSize = true;
-            this.btn1.Location = new System.Drawing.Point(12, 82);
+            this.btn1.Location = new System.Drawing.Point(12, 142);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(168, 21);
             this.btn1.TabIndex = 4;
@@ -77,7 +78,7 @@
             // btn2
             // 
             this.btn2.AutoSize = true;
-            this.btn2.Location = new System.Drawing.Point(231, 82);
+            this.btn2.Location = new System.Drawing.Point(226, 142);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(145, 21);
             this.btn2.TabIndex = 5;
@@ -89,7 +90,7 @@
             // btn3
             // 
             this.btn3.AutoSize = true;
-            this.btn3.Location = new System.Drawing.Point(403, 82);
+            this.btn3.Location = new System.Drawing.Point(396, 142);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(185, 21);
             this.btn3.TabIndex = 6;
@@ -101,18 +102,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 140);
+            this.label1.Location = new System.Drawing.Point(12, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Cipher Text";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // key
+            // 
+            this.key.Location = new System.Drawing.Point(12, 92);
+            this.key.Name = "key";
+            this.key.Size = new System.Drawing.Size(568, 22);
+            this.key.TabIndex = 8;
+            // 
             // PlainTxt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 382);
+            this.Controls.Add(this.key);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
@@ -137,6 +146,7 @@
         private System.Windows.Forms.RadioButton btn2;
         private System.Windows.Forms.RadioButton btn3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox key;
     }
 }
 
