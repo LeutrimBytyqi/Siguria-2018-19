@@ -28,3 +28,13 @@ D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj
 D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
 D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
 D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe.config
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.pdb
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csprojAssemblyReference.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.PlainTxt.resources
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.Properties.Resources.resources
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.GenerateResource.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
