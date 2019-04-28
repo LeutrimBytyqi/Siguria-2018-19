@@ -18,3 +18,13 @@ E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\ob
 E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
 E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
 E:\Librat\Siguria e te Dhenave\Trimi\Projekti 1\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe.config
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.exe
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\bin\Debug\Route Cipher 2.pdb
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csprojAssemblyReference.cache
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.PlainTxt.resources
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route_Cipher_2.Properties.Resources.resources
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.GenerateResource.cache
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.csproj.CoreCompileInputs.cache
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.exe
+D:\Siguria-2018-19\Route Cipher 2\Route Cipher 2\obj\Debug\Route Cipher 2.pdb
