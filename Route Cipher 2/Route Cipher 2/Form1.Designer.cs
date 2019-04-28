@@ -115,6 +115,7 @@
             this.key.Name = "key";
             this.key.Size = new System.Drawing.Size(568, 22);
             this.key.TabIndex = 8;
+            this.key.TextChanged += new System.EventHandler(this.key_TextChanged);
             // 
             // PlainTxt
             // 
