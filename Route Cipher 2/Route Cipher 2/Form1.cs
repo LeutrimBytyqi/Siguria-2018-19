@@ -71,24 +71,24 @@ namespace Route_Cipher_2
             
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
-            int m = 0;
+            int m = (rows-1);
             for (int l = 2; l < (rows + 2); l++)
             {
                 if (l % 2 == 0)
                 {
                     for (int j = (cols- 1); j >= 0; j--)
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[m, j]);
                     }
-                    m++;
+                    m--;
                 }
                 else
                 {
                     for (int j = 0; j <= (cols - 1); j++)
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[m, j]);
                     }
-                    m++;
+                    m--;
                 }
             }
             return stringu.ToString();
@@ -134,7 +134,7 @@ namespace Route_Cipher_2
                 {
                     for (int j = (cols - 1); j >= 0; j--)
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[m,j]);
                     }
                     m--;
                 }
@@ -142,7 +142,7 @@ namespace Route_Cipher_2
                 {
                     for (int j = 0; j <= (cols - 1); j++)
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[m,j]);
                     }
                     m--;
                 }
