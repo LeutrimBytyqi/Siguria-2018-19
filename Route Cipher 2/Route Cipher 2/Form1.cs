@@ -22,15 +22,33 @@ namespace Route_Cipher_2
 
         }
 
-        private char [,] GjeneroMatricen(string lblPlainText)
+        private char [,] GjeneroMatricen(string lblPlainText, int key)
         {
-            char[,] matrica = new char[5, 5];
             StringBuilder teksti = new StringBuilder(lblPlainText);
             
+            //if (!((lblplaintext.length % key) == 0))
+            //{
+            //    do
+            //    {
+            //        teksti = teksti + "x";
+            //        lblplaintext.length = lblplaintext.length();
+            //    } while (!((msgchar % key) == 0));
+            //}
+
+            //int gjatesiaETekstit = 0;
+            //for (int i = 0; i < teksti.Length; i = (i + key.Length))
+            //{
+            //    gjatesiaETekstit++;
+            //}
+            //gjatesiaETekstit = gjatesiaETekstit - 1;
+        
+            int gjatesia = Convert.ToInt32((teksti.Length / key) + 1);
+            char[,] matrica = new char[gjatesia, key];
+
             int k = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < gjatesia; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < key; j++)
                 {
                     if (k < lblPlainText.Length)
                     {
@@ -43,24 +61,14 @@ namespace Route_Cipher_2
                 }
             }
 
-            
+
             return matrica;
 
-            //for (int i = 0; i < rows; i++)
-            //{
-            //    for (int j = 0; j < cols; j++)
-            //    {
-            //        stringu.Append(matrica[j, i]);
-            //    }
-            //}
-
-
-            
-            
         }
         private string Enkriptimi1(char[,] matrica)
         {
             StringBuilder stringu = new StringBuilder();
+            
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
             int m = 0;
@@ -68,7 +76,7 @@ namespace Route_Cipher_2
             {
                 if (l % 2 == 0)
                 {
-                    for (int j = 4; j >= 0; j--)
+                    for (int j = (cols- 1); j >= 0; j--)
                     {
                         stringu.Append(matrica[j, m]);
                     }
@@ -76,7 +84,7 @@ namespace Route_Cipher_2
                 }
                 else
                 {
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= (cols - 1); j++)
                     {
                         stringu.Append(matrica[j, m]);
                     }
@@ -96,7 +104,7 @@ namespace Route_Cipher_2
             {
                 if (l % 2 == 0)
                 {
-                    for (int j = 4; j >= 0; j--)
+                    for (int j = (cols - 1); j >= 0; j--)
                     {
                         stringu.Append(matrica[m, j]);
                     }
@@ -104,7 +112,7 @@ namespace Route_Cipher_2
                 }
                 else
                 {
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= (cols - 1); j++)
                     {
                         stringu.Append(matrica[m, j]);
                     }
@@ -119,12 +127,12 @@ namespace Route_Cipher_2
             StringBuilder stringu = new StringBuilder();
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
-            int m = 4;
+            int m = rows - 1;
             for (int l = 2; l < (rows + 2); l++)
             {
                 if (l % 2 == 0)
                 {
-                    for (int j = 4; j >= 0; j--)
+                    for (int j = (cols - 1); j >= 0; j--)
                     {
                         stringu.Append(matrica[j, m]);
                     }
@@ -132,7 +140,7 @@ namespace Route_Cipher_2
                 }
                 else
                 {
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= (cols - 1); j++)
                     {
                         stringu.Append(matrica[j, m]);
                     }
@@ -149,21 +157,21 @@ namespace Route_Cipher_2
 
         private void btn1_CheckedChanged(object sender, EventArgs e)
         {
-            char[,] matrica = GjeneroMatricen(lblPlainText.Text);
+            char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi1(matrica);
             CipherTXT.Text = ciphertexti;
         }
 
         private void btn2_CheckedChanged(object sender, EventArgs e)
         {
-            char[,] matrica = GjeneroMatricen(lblPlainText.Text);
+            char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi2(matrica);
             CipherTXT.Text = ciphertexti;
         }
 
         private void btn3_CheckedChanged(object sender, EventArgs e)
         {
-            char[,] matrica = GjeneroMatricen(lblPlainText.Text);
+            char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi3(matrica);
             CipherTXT.Text = ciphertexti;
         }
