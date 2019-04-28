@@ -24,23 +24,9 @@ namespace Route_Cipher_2
 
         private char [,] GjeneroMatricen(string lblPlainText, int key)
         {
+            lblPlainText = lblPlainText.Replace(" ", "");
             StringBuilder teksti = new StringBuilder(lblPlainText);
-
-            //if (!((lblplaintext.length % key) == 0))
-            //{
-            //    do
-            //    {
-            //        teksti = teksti + "x";
-            //        lblplaintext.length = lblplaintext.length();
-            //    } while (!((msgchar % key) == 0));
-            //}
-
-            //int gjatesiaETekstit = 0;
-            //for (int i = 0; i < teksti.Length; i = (i + key.Length))
-            //{
-            //    gjatesiaETekstit++;
-            //}
-            //gjatesiaETekstit = gjatesiaETekstit - 1;
+            
             int gjatesia;
             if (teksti.Length % key != 0)
             {
@@ -160,6 +146,16 @@ namespace Route_Cipher_2
             }
             return stringu.ToString();
         }
+
+        //private string Dekriptimi(String stringu, int key)
+        //{
+        //    var gjatesia = Convert.ToInt32(stringu.Length / key);
+
+        //    for (int i = 0; i < gjatesia; i++)
+        //    {
+
+        //    }
+        //}
 
         private void btnEkripto_Click(object sender, EventArgs e)
         {
