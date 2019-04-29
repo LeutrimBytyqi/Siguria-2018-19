@@ -17,6 +17,8 @@ namespace Route_Cipher_2
             InitializeComponent();
         }
 
+        public int btn;
+
         private void lblPlainText_TextChanged(object sender, EventArgs e)
         {
 
@@ -61,6 +63,7 @@ namespace Route_Cipher_2
         }
         private string Enkriptimi1(char[,] matrica)
         {
+            btn = 1;
             StringBuilder stringu = new StringBuilder();
             
             var rows = matrica.GetLength(0);
@@ -90,6 +93,7 @@ namespace Route_Cipher_2
 
         private string Enkriptimi2(char[,] matrica)
         {
+            btn = 2;
             StringBuilder stringu = new StringBuilder();
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
@@ -118,6 +122,7 @@ namespace Route_Cipher_2
 
         private string Enkriptimi3(char[,] matrica)
         {
+            btn = 3;
             StringBuilder stringu = new StringBuilder();
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
@@ -145,23 +150,119 @@ namespace Route_Cipher_2
                 }
             }
             return stringu.ToString();
+        }        
+
+        private char[,] Dekriptimi(string stringu, int key)
+        {
+            var gjatesia = Convert.ToInt32(stringu.Length / key);
+            char[,] matdek = new char[gjatesia, key];
+            if (btn == 1)
+            {
+                int k = 0, m = 0;
+                for (int l = 0; l < key; l++)
+                {
+                    if (l % 2 == 0)
+                    {
+                        for (int j = (gjatesia - 1); j >= 0; j--)
+                        {
+                            matdek[j, k] = stringu[m++];
+                        }
+                        k++;
+                    }
+                    else
+                    {
+                        for (int j = 0; j <= (gjatesia - 1); j++)
+                        {
+                            matdek[j, k] = stringu[m];
+                            m++;
+                        }
+                        k++;
+                    }
+                }
+                return matdek;
+            }
+            else if (btn == 2)
+            {
+                int k = 0, m = 0;
+                for (int l = 0; l < gjatesia; l++)
+                {
+                    if (l % 2 == 0)
+                    {
+                        for (int j = (key - 1); j >= 0; j--)
+                        {
+                            matdek[k, j] = stringu[m++];
+                        }
+                        k++;
+                    }
+                    else
+                    {
+                        for (int j = 0; j <= (key - 1); j++)
+                        {
+                            matdek[k, j] = stringu[m++];
+                        }
+                        k++;
+                    }
+                }
+                return matdek;
+            }
+            else
+            {
+                int k = (key - 1), m = 0;
+                for (int l = 0; l < key; l++)
+                {
+                    if (l % 2 == 0)
+                    {
+                        for (int j = (gjatesia - 1); j >= 0; j--)
+                        {
+                            matdek[j, k] = stringu[m++];
+                        }
+                        k--;
+                    }
+                    else
+                    {
+                        for (int j = 0; j <= (gjatesia - 1); j++)
+                        {
+                            matdek[j, k] = stringu[m++];
+                        }
+                        k--;
+                    }
+                }
+                return matdek;
+            }
+            
         }
 
-        //private string Dekriptimi(String stringu, int key)
-        //{
-        //    var gjatesia = Convert.ToInt32(stringu.Length / key);
+        private string gjenerodek(char[,] matdek)
+        {
+            StringBuilder decriphted = new StringBuilder();
+            var rows = matdek.GetLength(0);
+            var cols = matdek.GetLength(1);
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    decriphted.Append(matdek[i, j]);
+                }
+            }
+            return decriphted.ToString();
+        }
+        
 
-        //    for (int i = 0; i < gjatesia; i++)
-        //    {
-
-        //    }
-        //}
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            char[,] dekriptimi = Dekriptimi(CipherTXT.Text, int.Parse(key.Text));
+            string tekstidekriptuar = gjenerodek(dekriptimi);
+            Decryption.Text = tekstidekriptuar;
+        }
         private void btnEkripto_Click(object sender, EventArgs e)
         {
             
         }
+        private void Decryption_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+            
         private void btn1_CheckedChanged(object sender, EventArgs e)
         {
             char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
@@ -197,5 +298,7 @@ namespace Route_Cipher_2
         {
 
         }
+
+        
     }
 }
