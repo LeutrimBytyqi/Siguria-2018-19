@@ -36,6 +36,10 @@
             this.btn3 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.key = new System.Windows.Forms.TextBox();
+            this.btnDekripto = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Decryption = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PlainText
@@ -52,7 +56,7 @@
             this.lblPlainText.AccessibleName = "lblPlainText";
             this.lblPlainText.Location = new System.Drawing.Point(13, 30);
             this.lblPlainText.Name = "lblPlainText";
-            this.lblPlainText.Size = new System.Drawing.Size(575, 22);
+            this.lblPlainText.Size = new System.Drawing.Size(567, 22);
             this.lblPlainText.TabIndex = 1;
             this.lblPlainText.TextChanged += new System.EventHandler(this.lblPlainText_TextChanged);
             // 
@@ -60,7 +64,7 @@
             // 
             this.CipherTXT.Location = new System.Drawing.Point(12, 203);
             this.CipherTXT.Name = "CipherTXT";
-            this.CipherTXT.Size = new System.Drawing.Size(576, 22);
+            this.CipherTXT.Size = new System.Drawing.Size(568, 22);
             this.CipherTXT.TabIndex = 3;
             // 
             // btn1
@@ -117,11 +121,50 @@
             this.key.TabIndex = 8;
             this.key.TextChanged += new System.EventHandler(this.key_TextChanged);
             // 
+            // btnDekripto
+            // 
+            this.btnDekripto.Location = new System.Drawing.Point(396, 240);
+            this.btnDekripto.Name = "btnDekripto";
+            this.btnDekripto.Size = new System.Drawing.Size(184, 37);
+            this.btnDekripto.TabIndex = 9;
+            this.btnDekripto.Text = "btnDekripto";
+            this.btnDekripto.UseVisualStyleBackColor = true;
+            this.btnDekripto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Decryption";
+            // 
+            // Decryption
+            // 
+            this.Decryption.Location = new System.Drawing.Point(12, 312);
+            this.Decryption.Name = "Decryption";
+            this.Decryption.Size = new System.Drawing.Size(568, 22);
+            this.Decryption.TabIndex = 12;
+            this.Decryption.TextChanged += new System.EventHandler(this.Decryption_TextChanged);
+            // 
             // PlainTxt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 382);
+            this.ClientSize = new System.Drawing.Size(586, 420);
+            this.Controls.Add(this.Decryption);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnDekripto);
             this.Controls.Add(this.key);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn3);
@@ -148,6 +191,10 @@
         private System.Windows.Forms.RadioButton btn3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox key;
+        private System.Windows.Forms.Button btnDekripto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Decryption;
     }
 }
 
