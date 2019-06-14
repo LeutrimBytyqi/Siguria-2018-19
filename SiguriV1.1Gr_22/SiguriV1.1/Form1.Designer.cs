@@ -50,7 +50,6 @@
             this.Server.TabIndex = 1;
             this.Server.Text = "Server";
             this.Server.UseVisualStyleBackColor = true;
-            this.Server.Click += new System.EventHandler(this.Server_Click);
             // 
             // Form1
             // 
