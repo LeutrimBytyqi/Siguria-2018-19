@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Route_Cipher_2
@@ -19,10 +13,6 @@ namespace Route_Cipher_2
 
         public int btn;
 
-        private void lblPlainText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private char [,] GjeneroMatricen(string lblPlainText, int key)
         {
@@ -32,13 +22,13 @@ namespace Route_Cipher_2
             int gjatesia;
             if (teksti.Length % key != 0)
             {
-                gjatesia = Convert.ToInt32((teksti.Length / key) + 1);
+                gjatesia = Convert.ToInt32((teksti.Length / key) + 1);   //numrat qe dalin me presje e merr numrin e plote dhe ja shton +1
             }
             else
             {
                 gjatesia = Convert.ToInt32(teksti.Length / key);
             }
-            
+
             char[,] matrica = new char[gjatesia, key];
 
             int k = 0;
@@ -61,60 +51,58 @@ namespace Route_Cipher_2
             return matrica;
 
         }
-        private string Enkriptimi1(char[,] matrica)
+        private string Enkriptimi1(char[,] matrica)          //prej posht majtas--lart djathtas  
         {
             btn = 1;
             StringBuilder stringu = new StringBuilder();
             
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
-            int m = 0;
-            for (int l = 0; l < cols; l++)
+
+            for (int l = 0; l < cols; l++) //l mirret si kolona 
             {
                 if (l % 2 == 0)
                 {
-                    for (int j = (rows- 1); j >= 0; j--)
+                    for (int j = (rows- 1); j >= 0; j--)//j mirret si rreshta
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[j, l]); 
                     }
-                    m++;
                 }
                 else
                 {
                     for (int j = 0; j <= (rows - 1); j++)
                     {
-                        stringu.Append(matrica[j, m]);
+                        stringu.Append(matrica[j, l]);
                     }
-                    m++;
                 }
             }
             return stringu.ToString();
         }
 
-        private string Enkriptimi2(char[,] matrica)
+        private string Enkriptimi2(char[,] matrica) //prej djathtas nalt<-majtas posht
         {
             btn = 2;
             StringBuilder stringu = new StringBuilder();
             var rows = matrica.GetLength(0);
             var cols = matrica.GetLength(1);
-            int m = 0;
-            for (int l = 0; l < rows; l++)
+            
+            for (int l = 0; l < rows; l++)   //l mirret si rreshta
             {
-                if (l % 2 == 0)
+                if (l % 2 == 0)                          
                 {
-                    for (int j = (cols - 1); j >= 0; j--)
+                    for (int j = (cols - 1); j >= 0; j--) //j mirret kolona
                     {
-                        stringu.Append(matrica[m, j]);
+                        stringu.Append(matrica[l, j]);
                     }
-                    m++;
+                    
                 }
                 else
                 {
                     for (int j = 0; j <= (cols - 1); j++)
                     {
-                        stringu.Append(matrica[m, j]);
+                        stringu.Append(matrica[l, j]);
                     }
-                    m++;
+                    
                 }
             }
             return stringu.ToString();
@@ -158,25 +146,23 @@ namespace Route_Cipher_2
             char[,] matdek = new char[gjatesia, key];
             if (btn == 1)
             {
-                int k = 0, m = 0;
-                for (int l = 0; l < key; l++)
+                int m = 0;
+                for (int l = 0; l < key; l++)//kolone l
                 {
                     if (l % 2 == 0)
                     {
-                        for (int j = (gjatesia - 1); j >= 0; j--)
+                        for (int j = (gjatesia - 1); j >= 0; j--) //rresht j
                         {
-                            matdek[j, k] = stringu[m++];
+                            matdek[j, l] = stringu[m++];
                         }
-                        k++;
                     }
                     else
                     {
                         for (int j = 0; j <= (gjatesia - 1); j++)
                         {
-                            matdek[j, k] = stringu[m];
+                            matdek[j, l] = stringu[m];
                             m++;
                         }
-                        k++;
                     }
                 }
                 return matdek;
@@ -205,7 +191,7 @@ namespace Route_Cipher_2
                 }
                 return matdek;
             }
-            else
+            else  //metoda 3
             {
                 int k = (key - 1), m = 0;
                 for (int l = 0; l < key; l++)
@@ -254,20 +240,19 @@ namespace Route_Cipher_2
             string tekstidekriptuar = gjenerodek(dekriptimi);
             Decryption.Text = tekstidekriptuar;
         }
-        private void btnEkripto_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void Decryption_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
             
         private void btn1_CheckedChanged(object sender, EventArgs e)
         {
             char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi1(matrica);
             CipherTXT.Text = ciphertexti;
+            if (btn1.Enabled)
+            {
+                btn2.Enabled = false;
+                btn3.Enabled = false;
+            }
+    
         }
 
         private void btn2_CheckedChanged(object sender, EventArgs e)
@@ -275,6 +260,11 @@ namespace Route_Cipher_2
             char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi2(matrica);
             CipherTXT.Text = ciphertexti;
+            if (btn2.Enabled)
+            {
+                btn1.Enabled = false;
+                btn3.Enabled = false;
+            }
         }
 
         private void btn3_CheckedChanged(object sender, EventArgs e)
@@ -282,6 +272,21 @@ namespace Route_Cipher_2
             char[,] matrica = GjeneroMatricen(lblPlainText.Text, int.Parse(key.Text));
             string ciphertexti = Enkriptimi3(matrica);
             CipherTXT.Text = ciphertexti;
+            if (btn3.Enabled)
+            {
+                btn2.Enabled = false;
+                btn1.Enabled = false;
+            }
+        }
+
+
+        private void btnEkripto_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Decryption_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -298,7 +303,10 @@ namespace Route_Cipher_2
         {
 
         }
+        private void lblPlainText_TextChanged(object sender, EventArgs e)
+        {
 
-        
+        }
+
     }
 }
