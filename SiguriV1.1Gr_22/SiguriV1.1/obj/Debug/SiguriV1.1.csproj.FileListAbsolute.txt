@@ -8,3 +8,13 @@ C:\wamp64\www\Siguri\SiguriV1.1\SiguriV1.1\bin\Debug\SiguriV1.1.exe
 C:\wamp64\www\Siguri\SiguriV1.1\SiguriV1.1\bin\Debug\SiguriV1.1.pdb
 C:\wamp64\www\Siguri\SiguriV1.1\SiguriV1.1\obj\Debug\SiguriV1.1.exe
 C:\wamp64\www\Siguri\SiguriV1.1\SiguriV1.1\obj\Debug\SiguriV1.1.pdb
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\SiguriV1.1.exe.config
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\SiguriV1.1.exe
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\SiguriV1.1.pdb
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csprojAssemblyReference.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Form1.resources
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Properties.Resources.resources
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.GenerateResource.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.exe
+C:\wamp64\www\Internet\GitHub\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.pdb
