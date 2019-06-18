@@ -33,7 +33,6 @@
             this.signInBtn = new System.Windows.Forms.Button();
             this.hostClientLbl = new System.Windows.Forms.Label();
             this.portLbl = new System.Windows.Forms.Label();
-            this.txtHostname = new System.Windows.Forms.TextBox();
             this.txtClientPort = new System.Windows.Forms.TextBox();
             this.messageClientTxt = new System.Windows.Forms.TextBox();
             this.signUpLbl = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLog = new System.Windows.Forms.TextBox();
+            this.txtHostname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSend
@@ -103,14 +103,6 @@
             this.portLbl.Size = new System.Drawing.Size(73, 17);
             this.portLbl.TabIndex = 4;
             this.portLbl.Text = "Client Port";
-            // 
-            // txtHostname
-            // 
-            this.txtHostname.Location = new System.Drawing.Point(113, 26);
-            this.txtHostname.Name = "txtHostname";
-            this.txtHostname.Size = new System.Drawing.Size(201, 22);
-            this.txtHostname.TabIndex = 5;
-            this.txtHostname.TextChanged += new System.EventHandler(this.hostClientTxt_TextChanged);
             // 
             // txtClientPort
             // 
@@ -288,14 +280,23 @@
             // 
             this.txtLog.Location = new System.Drawing.Point(135, 93);
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(100, 22);
+            this.txtLog.Size = new System.Drawing.Size(179, 22);
             this.txtLog.TabIndex = 27;
+            // 
+            // txtHostname
+            // 
+            this.txtHostname.Location = new System.Drawing.Point(94, 20);
+            this.txtHostname.Name = "txtHostname";
+            this.txtHostname.Size = new System.Drawing.Size(187, 22);
+            this.txtHostname.TabIndex = 28;
+            this.txtHostname.Text = "localhost";
             // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
+            this.Controls.Add(this.txtHostname);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -318,7 +319,6 @@
             this.Controls.Add(this.signUpLbl);
             this.Controls.Add(this.messageClientTxt);
             this.Controls.Add(this.txtClientPort);
-            this.Controls.Add(this.txtHostname);
             this.Controls.Add(this.portLbl);
             this.Controls.Add(this.hostClientLbl);
             this.Controls.Add(this.signInBtn);
@@ -338,7 +338,6 @@
         private System.Windows.Forms.Button signInBtn;
         private System.Windows.Forms.Label hostClientLbl;
         private System.Windows.Forms.Label portLbl;
-        private System.Windows.Forms.TextBox txtHostname;
         private System.Windows.Forms.TextBox txtClientPort;
         private System.Windows.Forms.TextBox messageClientTxt;
         private System.Windows.Forms.Label signUpLbl;
@@ -361,5 +360,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLog;
+        private System.Windows.Forms.TextBox txtHostname;
     }
 }

@@ -29,11 +29,12 @@ namespace SiguriV1._1
             server = new UdpClient(int.Parse(txtServerPort.Text));
             endPoint = new IPEndPoint(IPAddress.Any, 0);
             WriteLog("Server started...");
-
+            Thread thr = new Thread(new ThreadStart(ServerStart));
+            thr.Start();
 
             btnStart.Enabled = false;
 
-
+          
 
 
         }

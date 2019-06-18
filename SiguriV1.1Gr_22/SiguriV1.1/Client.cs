@@ -21,10 +21,7 @@ namespace SiguriV1._1
             InitializeComponent();
         }
 
-        private void hostClientTxt_TextChanged(object sender, EventArgs e)
-        {
 
-        }
        
 
         private void btnSend_Click(object sender, EventArgs e)
