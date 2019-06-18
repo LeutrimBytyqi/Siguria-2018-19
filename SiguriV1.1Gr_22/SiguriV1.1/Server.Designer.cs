@@ -30,11 +30,13 @@
         {
             this.messageServerTxt = new System.Windows.Forms.TextBox();
             this.hostServerTxt = new System.Windows.Forms.TextBox();
-            this.portServerTxt = new System.Windows.Forms.TextBox();
-            this.startBtn = new System.Windows.Forms.Button();
-            this.stopBtn = new System.Windows.Forms.Button();
+            this.txtServerPort = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.newClientBtn = new System.Windows.Forms.Button();
             this.hostLblServer = new System.Windows.Forms.Label();
             this.portLblServer = new System.Windows.Forms.Label();
+            this.txtLog = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // messageServerTxt
@@ -52,30 +54,33 @@
             this.hostServerTxt.Size = new System.Drawing.Size(185, 22);
             this.hostServerTxt.TabIndex = 1;
             // 
-            // portServerTxt
+            // txtServerPort
             // 
-            this.portServerTxt.Location = new System.Drawing.Point(379, 45);
-            this.portServerTxt.Name = "portServerTxt";
-            this.portServerTxt.Size = new System.Drawing.Size(183, 22);
-            this.portServerTxt.TabIndex = 2;
+            this.txtServerPort.Location = new System.Drawing.Point(379, 45);
+            this.txtServerPort.Name = "txtServerPort";
+            this.txtServerPort.Size = new System.Drawing.Size(183, 22);
+            this.txtServerPort.TabIndex = 2;
+            this.txtServerPort.Text = "12000";
             // 
-            // startBtn
+            // btnStart
             // 
-            this.startBtn.Location = new System.Drawing.Point(597, 45);
-            this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(75, 23);
-            this.startBtn.TabIndex = 3;
-            this.startBtn.Text = "Start";
-            this.startBtn.UseVisualStyleBackColor = true;
+            this.btnStart.Location = new System.Drawing.Point(597, 45);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // stopBtn
+            // newClientBtn
             // 
-            this.stopBtn.Location = new System.Drawing.Point(713, 44);
-            this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(75, 23);
-            this.stopBtn.TabIndex = 4;
-            this.stopBtn.Text = "Stop";
-            this.stopBtn.UseVisualStyleBackColor = true;
+            this.newClientBtn.Location = new System.Drawing.Point(713, 44);
+            this.newClientBtn.Name = "newClientBtn";
+            this.newClientBtn.Size = new System.Drawing.Size(75, 23);
+            this.newClientBtn.TabIndex = 4;
+            this.newClientBtn.Text = "New Client";
+            this.newClientBtn.UseVisualStyleBackColor = true;
+            this.newClientBtn.Click += new System.EventHandler(this.newClientBtn_Click);
             // 
             // hostLblServer
             // 
@@ -95,16 +100,34 @@
             this.portLblServer.TabIndex = 6;
             this.portLblServer.Text = "Port";
             // 
+            // txtLog
+            // 
+            this.txtLog.Location = new System.Drawing.Point(151, 81);
+            this.txtLog.Name = "txtLog";
+            this.txtLog.Size = new System.Drawing.Size(123, 22);
+            this.txtLog.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "te dhenat e klientit";
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtLog);
             this.Controls.Add(this.portLblServer);
             this.Controls.Add(this.hostLblServer);
-            this.Controls.Add(this.stopBtn);
-            this.Controls.Add(this.startBtn);
-            this.Controls.Add(this.portServerTxt);
+            this.Controls.Add(this.newClientBtn);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.txtServerPort);
             this.Controls.Add(this.hostServerTxt);
             this.Controls.Add(this.messageServerTxt);
             this.Name = "Server";
@@ -118,10 +141,12 @@
 
         private System.Windows.Forms.TextBox messageServerTxt;
         private System.Windows.Forms.TextBox hostServerTxt;
-        private System.Windows.Forms.TextBox portServerTxt;
-        private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.Button stopBtn;
+        private System.Windows.Forms.TextBox txtServerPort;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button newClientBtn;
         private System.Windows.Forms.Label hostLblServer;
         private System.Windows.Forms.Label portLblServer;
+        private System.Windows.Forms.TextBox txtLog;
+        private System.Windows.Forms.Label label1;
     }
 }
