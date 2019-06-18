@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SiguriV1._1
 {
-    class dbConnection
+    public class dbConnection
     {
         MySqlConnection connection
             = new MySqlConnection("datasource=localhost;" +
