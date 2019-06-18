@@ -58,6 +58,33 @@ namespace SiguriV1._1
             this.BeginInvoke(invoker);
         }
 
+        private void signInBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+        Server conObj = new Server();
+        private void signUpBtn_Click(object sender, EventArgs e)
+        {
+            
+            string insertQuery = "insert into employees.emp" +
+                "(name, surname,email,password,salary,grade) " +
+                "values ('" + txtNameSU.Text + "', '" + txtSurnameSU.Text + "' ," +
+                "'" + txtEmailSU.Text + "' '" + txtPassSU.Text + "'," +
+                "'" + txtSalarySU.Text + "', " + txtGradeSU.Text + ") ";
 
+            conObj.connection.Open(); //variabla connection te klasa dbConnection(edhe te serveri e
+            MySqlCommand cmd = new MySqlCommand(insertQuery, connection); //MySqlCommand osht
+            // klase e gatshme per lidhje 
+            if (cmd.ExecuteNonQuery() ==1)
+            {
+                MessageBox.Show("Data Inserted");
+            }
+            else
+            {
+                MessageBox.Show("Not Inserted");
+            }
+            connection.Close();
+
+        }
     }
 }

@@ -43,12 +43,12 @@
             this.pasLbl = new System.Windows.Forms.Label();
             this.emailLbl = new System.Windows.Forms.Label();
             this.passwordLbl = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNameSU = new System.Windows.Forms.TextBox();
+            this.txtSurnameSU = new System.Windows.Forms.TextBox();
+            this.txtEmailSU = new System.Windows.Forms.TextBox();
+            this.txtPassSU = new System.Windows.Forms.TextBox();
+            this.txtEmailSI = new System.Windows.Forms.TextBox();
+            this.txtPassSI = new System.Windows.Forms.TextBox();
             this.txtServerPort = new System.Windows.Forms.TextBox();
             this.portServerCLbl = new System.Windows.Forms.Label();
             this.txtMsg = new System.Windows.Forms.TextBox();
@@ -56,6 +56,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.txtHostname = new System.Windows.Forms.TextBox();
+            this.txtSalarySU = new System.Windows.Forms.TextBox();
+            this.txtGradeSU = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSend
@@ -76,6 +80,7 @@
             this.signUpBtn.TabIndex = 1;
             this.signUpBtn.Text = "Sign Up";
             this.signUpBtn.UseVisualStyleBackColor = true;
+            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
             // signInBtn
             // 
@@ -85,6 +90,7 @@
             this.signInBtn.TabIndex = 2;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = true;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // hostClientLbl
             // 
@@ -141,7 +147,7 @@
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
-            this.nameLbl.Location = new System.Drawing.Point(4, 201);
+            this.nameLbl.Location = new System.Drawing.Point(4, 195);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(53, 17);
             this.nameLbl.TabIndex = 10;
@@ -150,7 +156,7 @@
             // surnameLbl
             // 
             this.surnameLbl.AutoSize = true;
-            this.surnameLbl.Location = new System.Drawing.Point(4, 261);
+            this.surnameLbl.Location = new System.Drawing.Point(1, 233);
             this.surnameLbl.Name = "surnameLbl";
             this.surnameLbl.Size = new System.Drawing.Size(73, 17);
             this.surnameLbl.TabIndex = 11;
@@ -159,7 +165,7 @@
             // emLbl
             // 
             this.emLbl.AutoSize = true;
-            this.emLbl.Location = new System.Drawing.Point(4, 313);
+            this.emLbl.Location = new System.Drawing.Point(4, 268);
             this.emLbl.Name = "emLbl";
             this.emLbl.Size = new System.Drawing.Size(50, 17);
             this.emLbl.TabIndex = 12;
@@ -168,7 +174,7 @@
             // pasLbl
             // 
             this.pasLbl.AutoSize = true;
-            this.pasLbl.Location = new System.Drawing.Point(4, 366);
+            this.pasLbl.Location = new System.Drawing.Point(1, 301);
             this.pasLbl.Name = "pasLbl";
             this.pasLbl.Size = new System.Drawing.Size(77, 17);
             this.pasLbl.TabIndex = 13;
@@ -192,47 +198,47 @@
             this.passwordLbl.TabIndex = 15;
             this.passwordLbl.Text = "Password :";
             // 
-            // textBox3
+            // txtNameSU
             // 
-            this.textBox3.Location = new System.Drawing.Point(94, 195);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 22);
-            this.textBox3.TabIndex = 16;
+            this.txtNameSU.Location = new System.Drawing.Point(94, 192);
+            this.txtNameSU.Name = "txtNameSU";
+            this.txtNameSU.Size = new System.Drawing.Size(173, 22);
+            this.txtNameSU.TabIndex = 16;
             // 
-            // textBox4
+            // txtSurnameSU
             // 
-            this.textBox4.Location = new System.Drawing.Point(94, 256);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 22);
-            this.textBox4.TabIndex = 17;
+            this.txtSurnameSU.Location = new System.Drawing.Point(94, 233);
+            this.txtSurnameSU.Name = "txtSurnameSU";
+            this.txtSurnameSU.Size = new System.Drawing.Size(173, 22);
+            this.txtSurnameSU.TabIndex = 17;
             // 
-            // textBox5
+            // txtEmailSU
             // 
-            this.textBox5.Location = new System.Drawing.Point(94, 308);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(173, 22);
-            this.textBox5.TabIndex = 18;
+            this.txtEmailSU.Location = new System.Drawing.Point(94, 268);
+            this.txtEmailSU.Name = "txtEmailSU";
+            this.txtEmailSU.Size = new System.Drawing.Size(173, 22);
+            this.txtEmailSU.TabIndex = 18;
             // 
-            // textBox6
+            // txtPassSU
             // 
-            this.textBox6.Location = new System.Drawing.Point(94, 366);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 22);
-            this.textBox6.TabIndex = 19;
+            this.txtPassSU.Location = new System.Drawing.Point(94, 301);
+            this.txtPassSU.Name = "txtPassSU";
+            this.txtPassSU.Size = new System.Drawing.Size(173, 22);
+            this.txtPassSU.TabIndex = 19;
             // 
-            // textBox7
+            // txtEmailSI
             // 
-            this.textBox7.Location = new System.Drawing.Point(460, 201);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 22);
-            this.textBox7.TabIndex = 20;
+            this.txtEmailSI.Location = new System.Drawing.Point(460, 201);
+            this.txtEmailSI.Name = "txtEmailSI";
+            this.txtEmailSI.Size = new System.Drawing.Size(174, 22);
+            this.txtEmailSI.TabIndex = 20;
             // 
-            // textBox8
+            // txtPassSI
             // 
-            this.textBox8.Location = new System.Drawing.Point(460, 283);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 22);
-            this.textBox8.TabIndex = 21;
+            this.txtPassSI.Location = new System.Drawing.Point(460, 283);
+            this.txtPassSI.Name = "txtPassSI";
+            this.txtPassSI.Size = new System.Drawing.Size(174, 22);
+            this.txtPassSI.TabIndex = 21;
             // 
             // txtServerPort
             // 
@@ -291,11 +297,47 @@
             this.txtHostname.TabIndex = 28;
             this.txtHostname.Text = "localhost";
             // 
+            // txtSalarySU
+            // 
+            this.txtSalarySU.Location = new System.Drawing.Point(94, 339);
+            this.txtSalarySU.Name = "txtSalarySU";
+            this.txtSalarySU.Size = new System.Drawing.Size(173, 22);
+            this.txtSalarySU.TabIndex = 29;
+            // 
+            // txtGradeSU
+            // 
+            this.txtGradeSU.Location = new System.Drawing.Point(94, 379);
+            this.txtGradeSU.Name = "txtGradeSU";
+            this.txtGradeSU.Size = new System.Drawing.Size(173, 22);
+            this.txtGradeSU.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 344);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Salary";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 383);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Grade";
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtGradeSU);
+            this.Controls.Add(this.txtSalarySU);
             this.Controls.Add(this.txtHostname);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.label2);
@@ -303,12 +345,12 @@
             this.Controls.Add(this.txtMsg);
             this.Controls.Add(this.portServerCLbl);
             this.Controls.Add(this.txtServerPort);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPassSI);
+            this.Controls.Add(this.txtEmailSI);
+            this.Controls.Add(this.txtPassSU);
+            this.Controls.Add(this.txtEmailSU);
+            this.Controls.Add(this.txtSurnameSU);
+            this.Controls.Add(this.txtNameSU);
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.emailLbl);
             this.Controls.Add(this.pasLbl);
@@ -348,12 +390,12 @@
         private System.Windows.Forms.Label pasLbl;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Label passwordLbl;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtNameSU;
+        private System.Windows.Forms.TextBox txtSurnameSU;
+        private System.Windows.Forms.TextBox txtEmailSU;
+        private System.Windows.Forms.TextBox txtPassSU;
+        private System.Windows.Forms.TextBox txtEmailSI;
+        private System.Windows.Forms.TextBox txtPassSI;
         private System.Windows.Forms.TextBox txtServerPort;
         private System.Windows.Forms.Label portServerCLbl;
         private System.Windows.Forms.TextBox txtMsg;
@@ -361,5 +403,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.TextBox txtHostname;
+        private System.Windows.Forms.TextBox txtSalarySU;
+        private System.Windows.Forms.TextBox txtGradeSU;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
