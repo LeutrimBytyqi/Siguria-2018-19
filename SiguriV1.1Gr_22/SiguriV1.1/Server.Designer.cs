@@ -49,13 +49,16 @@
             // 
             // hostServerTxt
             // 
+            this.hostServerTxt.Enabled = false;
             this.hostServerTxt.Location = new System.Drawing.Point(89, 42);
             this.hostServerTxt.Name = "hostServerTxt";
             this.hostServerTxt.Size = new System.Drawing.Size(185, 22);
             this.hostServerTxt.TabIndex = 1;
+            this.hostServerTxt.Text = "localhost";
             // 
             // txtServerPort
             // 
+            this.txtServerPort.Enabled = false;
             this.txtServerPort.Location = new System.Drawing.Point(379, 45);
             this.txtServerPort.Name = "txtServerPort";
             this.txtServerPort.Size = new System.Drawing.Size(183, 22);

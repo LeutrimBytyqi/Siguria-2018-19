@@ -98,13 +98,13 @@ namespace SiguriV1._1
                             {
                                 while (myReader.Read())
                                 {
-                                    txtNameSU.Text = myReader.GetValue(1).ToString();
-                                    txtSurnameSU.Text = myReader.GetValue(2).ToString();
-                                    txtEmailSU.Text = myReader.GetValue(3).ToString();
-                                    txtPassSU.Text = myReader.GetValue(4).ToString();
-                                    txtSalarySU.Text = myReader.GetInt32(5).ToString();
+                                    txtNameInfo.Text = myReader.GetValue(1).ToString();
+                                    txtSurnameInfo.Text = myReader.GetValue(2).ToString();
+                                    txtEmailInfo.Text = myReader.GetValue(3).ToString();
+                                    txtPassInfo.Text = myReader.GetValue(4).ToString();
+                                    txtSalaryInfo.Text = myReader.GetInt32(5).ToString();
                                     //txtSalarySU.Text = myReader.GetValue(4).ToString();
-                                    txtGradeSU.Text = myReader.GetValue(6).ToString();
+                                    txtGradeInfo.Text = myReader.GetValue(6).ToString();
                                 }
                                 cmd.Dispose();
                                 
@@ -165,6 +165,16 @@ namespace SiguriV1._1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            txtSurnameInfo.Clear();
+            txtEmailInfo.Clear();
+            txtNameInfo.Clear();
+            txtSalaryInfo.Clear();
+            txtPassInfo.Clear();
+            txtGradeInfo.Clear();               
         }
     }
 }
