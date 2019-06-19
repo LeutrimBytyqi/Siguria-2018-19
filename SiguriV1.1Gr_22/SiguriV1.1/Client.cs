@@ -81,11 +81,36 @@ namespace SiguriV1._1
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
                     DataSet dataSet = new DataSet();
                     dataAdapter.Fill(dataSet);
-                    connection.Close();
+                    //connection.Close();
                     int count = dataSet.Tables[0].Rows.Count;
                     if (count == 1)
                     {
                         MessageBox.Show("Successfully login");
+                        //ME U SHFAQ TE DHENAT SIPAS QATIJ EMAILI QE JEM LLOGIRAT PASI QE OSHT UNIQUE
+                        //GABIM DIQKA!!
+                        //try
+                        //{
+                        //    MySqlDataReader myReader = null;
+                        //    cmd = new MySqlCommand("select * from emp where email = @email", connection);
+                        //    myReader = cmd.ExecuteReader();
+                        //    while (myReader.Read())
+                        //    {
+                        //        txtNameSU.Text = myReader.GetValue(0).ToString();
+                        //        txtSurnameSU.Text = myReader.GetValue(1).ToString();
+                        //        txtEmailSU.Text = myReader.GetValue(2).ToString();
+                        //        txtPassSU.Text = myReader.GetValue(3).ToString();
+                        //        txtSalarySU.Text = myReader.GetValue(4).ToString();
+                        //        txtGradeSU.Text = myReader.GetValue(5).ToString();
+                        //    }
+                        //    cmd.Dispose();
+                        //    connection.Close();
+
+                        //}
+                        //catch (Exception ex1)
+                        //{
+                        //    MessageBox.Show(ex1.Message);
+                        //}
+
                     }
                     else
                     {
