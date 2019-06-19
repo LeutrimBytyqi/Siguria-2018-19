@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,9 +21,13 @@ namespace SiguriV1._1
         {
             InitializeComponent();
         }
+        MySqlConnection connection
+           = new MySqlConnection("datasource=localhost;" +
+               "port=3306;database=employees;username=root;password=");
+        MySqlCommand cmd; 
 
 
-       
+
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -60,31 +65,76 @@ namespace SiguriV1._1
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (txtEmailSI.Text == "" && txtPassSI.Text == "")
+                {
+                    MessageBox.Show("Enter email and password");
+                }
+                else
+                {
+                   
+                    cmd = new MySqlCommand("select * from emp where email = @email and password = @password", connection);
+                    cmd.Parameters.AddWithValue("@email", txtEmailSI.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPassSI.Text);
+                    connection.Open();
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    connection.Close();
+                    int count = dataSet.Tables[0].Rows.Count;
+                    if (count == 1)
+                    {
+                        MessageBox.Show("Successfully login");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed login");
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
-        Server conObj = new Server();
+      
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             
-            string insertQuery = "insert into employees.emp" +
+            string insertQuery = "insert into emp" +
                 "(name, surname,email,password,salary,grade) " +
-                "values ('" + txtNameSU.Text + "', '" + txtSurnameSU.Text + "' ," +
-                "'" + txtEmailSU.Text + "' '" + txtPassSU.Text + "'," +
-                "'" + txtSalarySU.Text + "', " + txtGradeSU.Text + ") ";
+                "values (@name, @surname, @email, @password, @salary, @grade) ";
 
-            conObj.connection.Open(); //variabla connection te klasa dbConnection(edhe te serveri e
-            MySqlCommand cmd = new MySqlCommand(insertQuery, connection); //MySqlCommand osht
-            // klase e gatshme per lidhje 
-            if (cmd.ExecuteNonQuery() ==1)
-            {
-                MessageBox.Show("Data Inserted");
-            }
-            else
-            {
-                MessageBox.Show("Not Inserted");
-            }
-            connection.Close();
+            connection.Open();
+            cmd = new MySqlCommand(insertQuery, connection);
+            cmd.Parameters.AddWithValue("@name",txtNameSU.Text);
+            cmd.Parameters.AddWithValue("@surname", txtSurnameSU.Text);
+            cmd.Parameters.AddWithValue("@email", txtEmailSU.Text);
+            cmd.Parameters.AddWithValue("@password", txtPassSU.Text);
+            cmd.Parameters.AddWithValue("@salary", txtSalarySU.Text);
+            cmd.Parameters.AddWithValue("@grade", txtGradeSU.Text);
 
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    //MessageBox.Show("Data Inserted");
+                    messageClientTxt.Text = "Inserted";
+                    signInBtn.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Not Inserted");
+                }
+                connection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

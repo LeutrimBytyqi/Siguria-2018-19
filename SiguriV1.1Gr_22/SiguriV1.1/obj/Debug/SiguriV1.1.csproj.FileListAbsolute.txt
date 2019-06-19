@@ -20,3 +20,8 @@ D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.Genera
 D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.CoreCompileInputs.cache
 D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.exe
 D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.pdb
+D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\MySql.Data.dll
+D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\Google.Protobuf.dll
+D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\BouncyCastle.Crypto.dll
+D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\bin\Debug\MySql.Data.xml
+D:\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.CopyComplete

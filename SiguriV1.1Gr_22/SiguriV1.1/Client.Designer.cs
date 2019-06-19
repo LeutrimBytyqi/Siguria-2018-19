@@ -60,6 +60,7 @@
             this.txtGradeSU = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.signOutBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSend
@@ -76,7 +77,7 @@
             // 
             this.signUpBtn.Location = new System.Drawing.Point(135, 416);
             this.signUpBtn.Name = "signUpBtn";
-            this.signUpBtn.Size = new System.Drawing.Size(75, 23);
+            this.signUpBtn.Size = new System.Drawing.Size(93, 33);
             this.signUpBtn.TabIndex = 1;
             this.signUpBtn.Text = "Sign Up";
             this.signUpBtn.UseVisualStyleBackColor = true;
@@ -84,9 +85,9 @@
             // 
             // signInBtn
             // 
-            this.signInBtn.Location = new System.Drawing.Point(515, 339);
+            this.signInBtn.Location = new System.Drawing.Point(499, 333);
             this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(75, 23);
+            this.signInBtn.Size = new System.Drawing.Size(91, 38);
             this.signInBtn.TabIndex = 2;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             // hostClientLbl
             // 
             this.hostClientLbl.AutoSize = true;
-            this.hostClientLbl.Location = new System.Drawing.Point(35, 26);
+            this.hostClientLbl.Location = new System.Drawing.Point(35, 20);
             this.hostClientLbl.Name = "hostClientLbl";
             this.hostClientLbl.Size = new System.Drawing.Size(45, 17);
             this.hostClientLbl.TabIndex = 3;
@@ -183,7 +184,7 @@
             // emailLbl
             // 
             this.emailLbl.AutoSize = true;
-            this.emailLbl.Location = new System.Drawing.Point(368, 195);
+            this.emailLbl.Location = new System.Drawing.Point(385, 201);
             this.emailLbl.Name = "emailLbl";
             this.emailLbl.Size = new System.Drawing.Size(50, 17);
             this.emailLbl.TabIndex = 14;
@@ -192,7 +193,7 @@
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
-            this.passwordLbl.Location = new System.Drawing.Point(368, 286);
+            this.passwordLbl.Location = new System.Drawing.Point(377, 286);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(77, 17);
             this.passwordLbl.TabIndex = 15;
@@ -251,7 +252,7 @@
             // portServerCLbl
             // 
             this.portServerCLbl.AutoSize = true;
-            this.portServerCLbl.Location = new System.Drawing.Point(364, 74);
+            this.portServerCLbl.Location = new System.Drawing.Point(355, 77);
             this.portServerCLbl.Name = "portServerCLbl";
             this.portServerCLbl.Size = new System.Drawing.Size(80, 17);
             this.portServerCLbl.TabIndex = 23;
@@ -259,7 +260,7 @@
             // 
             // txtMsg
             // 
-            this.txtMsg.Location = new System.Drawing.Point(12, 94);
+            this.txtMsg.Location = new System.Drawing.Point(12, 93);
             this.txtMsg.Name = "txtMsg";
             this.txtMsg.Size = new System.Drawing.Size(93, 22);
             this.txtMsg.TabIndex = 24;
@@ -267,7 +268,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 74);
+            this.label1.Location = new System.Drawing.Point(12, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 25;
@@ -329,11 +330,21 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Grade";
             // 
+            // signOutBtn
+            // 
+            this.signOutBtn.Location = new System.Drawing.Point(499, 389);
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(91, 36);
+            this.signOutBtn.TabIndex = 33;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.UseVisualStyleBackColor = true;
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
+            this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtGradeSU);
@@ -407,5 +418,6 @@
         private System.Windows.Forms.TextBox txtGradeSU;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button signOutBtn;
     }
 }
