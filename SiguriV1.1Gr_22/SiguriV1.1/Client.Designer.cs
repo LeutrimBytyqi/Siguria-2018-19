@@ -119,6 +119,7 @@
             this.txtClientPort.Size = new System.Drawing.Size(194, 22);
             this.txtClientPort.TabIndex = 6;
             this.txtClientPort.Text = "11000";
+            this.txtClientPort.TextChanged += new System.EventHandler(this.txtClientPort_TextChanged);
             // 
             // messageClientTxt
             // 

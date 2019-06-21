@@ -58,12 +58,12 @@ namespace SiguriV1._1
                 {
 
                     connection.Open();
-                    //WriteLog(" Name :" + msg[2]);
-                    //WriteLog(" Surname :" + msg[3]);
-                    //WriteLog(" Email :" + msg[4]);
-                    //WriteLog(" Password :" + msg[5]);
-                    //WriteLog(" Salary :" + msg[6]);
-                    //WriteLog(" Grade :" + msg[7]);
+                    WriteLog(" Name :" + msg[2]);
+                    WriteLog(" Surname :" + msg[3]);
+                    WriteLog(" Email :" + msg[4]);
+                    WriteLog(" Password :" + msg[5]);
+                    WriteLog(" Salary :" + msg[6]);
+                    WriteLog(" Grade :" + msg[7]);
 
                     string insertQuery = "insert into emp" +
                         "(name, surname, email, password, salary, grade) " +
@@ -80,6 +80,25 @@ namespace SiguriV1._1
                     for (int i = 2; i < msg.Length; i++)
                     {
                         palidhje.Append(msg[i] + Environment.NewLine);
+                    }
+
+                    try
+                    {
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Data Inserted");
+                            //messageClientTxt.Text = "Inserted";
+                            //signInBtn.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Inserted");
+                        }
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
 
                     buffer = Encoding.Unicode.GetBytes(palidhje.ToString());

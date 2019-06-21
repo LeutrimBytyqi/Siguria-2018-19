@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +19,12 @@ namespace SiguriV1._1
     {
         UdpClient client;
         IPEndPoint endPoint;
+        byte[] KEY;
+        byte[] IV;
+        byte[] encryptedKEY;
+        byte[] encryptedMSG;
+        byte[] pergjigjjaMsg;
+
         public Client()
         {
             InitializeComponent();
@@ -24,10 +32,9 @@ namespace SiguriV1._1
         MySqlConnection connection
            = new MySqlConnection("datasource=localhost;" +
                "port=3306;database=employees;username=root;password=");
-        MySqlCommand cmd; 
-
-
-
+        MySqlCommand cmd;
+        private object clientCertificate;
+        private byte[] encryptedKEY;
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -77,8 +84,7 @@ namespace SiguriV1._1
                 }
                 else
                 {
-                    string txtEmailSi = txtEmailSI.Text;
-                    string txtPassSi = txtPassSI.Text;
+                    loginEncrypt();
 
                     client = new UdpClient(clientPort);
                 }
@@ -87,6 +93,8 @@ namespace SiguriV1._1
             {
                 MessageBox.Show(e1.Message);
             }
+
+            
 
             //portnumber.hostname.msg
             string msg = clientPort + "%" + hostName + "%" + txtEmailSI.Text + "%" + txtPassSI.Text;
@@ -162,7 +170,30 @@ namespace SiguriV1._1
             //}
             //connection.Close();
         }
-      
+
+        private void loginEncrypt()
+        {
+            string txtEmailSi = txtEmailSI.Text;
+            string txtPassSi = txtPassSI.Text;
+
+            DESCryptoServiceProvider desObj = new DESCryptoServiceProvider();
+            desObj.GenerateKey();
+
+            desObj.GenerateIV();
+            desObj.Padding = PaddingMode.Zeros;
+            desObj.Mode = CipherMode.CBC;
+            KEY = desObj.Key;
+            IV = desObj.IV;
+
+            RSACryptoServiceProvider publicKeyProvider =
+            (RSACryptoServiceProvider)clientCertificate.PublicKey.Key;
+            encryptedKEY = publicKeyProvider.Encrypt(KEY, true);
+
+
+
+
+        }
+
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             int serverPort = int.Parse(txtServerPort.Text);
@@ -257,6 +288,19 @@ namespace SiguriV1._1
             //txtSalaryInfo.Clear();
             //txtPassInfo.Clear();
             //txtGradeInfo.Clear();               
+        }
+
+        private void txtClientPort_TextChanged(object sender, EventArgs e)
+        {
+            //Random rnd = new Random();
+            //int month = rnd.Next(1201, 22000);  //int x = 5;
+            //string y = month.ToString();
+            //txtClientPort.Text = y;
+
+
+            
+            //string y = x.ToString();
+
         }
     }
 }
