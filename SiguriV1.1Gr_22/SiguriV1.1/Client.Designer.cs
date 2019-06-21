@@ -61,12 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.signOutBtn = new System.Windows.Forms.Button();
-            this.txtSurnameInfo = new System.Windows.Forms.TextBox();
-            this.txtEmailInfo = new System.Windows.Forms.TextBox();
-            this.txtPassInfo = new System.Windows.Forms.TextBox();
-            this.txtSalaryInfo = new System.Windows.Forms.TextBox();
-            this.txtGradeInfo = new System.Windows.Forms.TextBox();
-            this.txtNameInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -128,10 +122,10 @@
             // 
             // messageClientTxt
             // 
-            this.messageClientTxt.Location = new System.Drawing.Point(415, 454);
+            this.messageClientTxt.Location = new System.Drawing.Point(783, 195);
             this.messageClientTxt.Multiline = true;
             this.messageClientTxt.Name = "messageClientTxt";
-            this.messageClientTxt.Size = new System.Drawing.Size(243, 21);
+            this.messageClientTxt.Size = new System.Drawing.Size(194, 230);
             this.messageClientTxt.TabIndex = 7;
             // 
             // signUpLbl
@@ -349,48 +343,6 @@
             this.signOutBtn.UseVisualStyleBackColor = true;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
-            // txtSurnameInfo
-            // 
-            this.txtSurnameInfo.Location = new System.Drawing.Point(797, 228);
-            this.txtSurnameInfo.Name = "txtSurnameInfo";
-            this.txtSurnameInfo.Size = new System.Drawing.Size(163, 22);
-            this.txtSurnameInfo.TabIndex = 34;
-            // 
-            // txtEmailInfo
-            // 
-            this.txtEmailInfo.Location = new System.Drawing.Point(796, 268);
-            this.txtEmailInfo.Name = "txtEmailInfo";
-            this.txtEmailInfo.Size = new System.Drawing.Size(163, 22);
-            this.txtEmailInfo.TabIndex = 35;
-            // 
-            // txtPassInfo
-            // 
-            this.txtPassInfo.Location = new System.Drawing.Point(796, 316);
-            this.txtPassInfo.Name = "txtPassInfo";
-            this.txtPassInfo.Size = new System.Drawing.Size(164, 22);
-            this.txtPassInfo.TabIndex = 36;
-            // 
-            // txtSalaryInfo
-            // 
-            this.txtSalaryInfo.Location = new System.Drawing.Point(796, 363);
-            this.txtSalaryInfo.Name = "txtSalaryInfo";
-            this.txtSalaryInfo.Size = new System.Drawing.Size(164, 22);
-            this.txtSalaryInfo.TabIndex = 37;
-            // 
-            // txtGradeInfo
-            // 
-            this.txtGradeInfo.Location = new System.Drawing.Point(797, 403);
-            this.txtGradeInfo.Name = "txtGradeInfo";
-            this.txtGradeInfo.Size = new System.Drawing.Size(163, 22);
-            this.txtGradeInfo.TabIndex = 38;
-            // 
-            // txtNameInfo
-            // 
-            this.txtNameInfo.Location = new System.Drawing.Point(797, 190);
-            this.txtNameInfo.Name = "txtNameInfo";
-            this.txtNameInfo.Size = new System.Drawing.Size(163, 22);
-            this.txtNameInfo.TabIndex = 39;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -406,12 +358,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtNameInfo);
-            this.Controls.Add(this.txtGradeInfo);
-            this.Controls.Add(this.txtSalaryInfo);
-            this.Controls.Add(this.txtPassInfo);
-            this.Controls.Add(this.txtEmailInfo);
-            this.Controls.Add(this.txtSurnameInfo);
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -487,12 +433,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button signOutBtn;
-        private System.Windows.Forms.TextBox txtSurnameInfo;
-        private System.Windows.Forms.TextBox txtEmailInfo;
-        private System.Windows.Forms.TextBox txtPassInfo;
-        private System.Windows.Forms.TextBox txtSalaryInfo;
-        private System.Windows.Forms.TextBox txtGradeInfo;
-        private System.Windows.Forms.TextBox txtNameInfo;
         private System.Windows.Forms.Label label5;
     }
 }

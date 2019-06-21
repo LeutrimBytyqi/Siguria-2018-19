@@ -107,7 +107,7 @@
             // 
             this.txtLog.Location = new System.Drawing.Point(151, 81);
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(123, 22);
+            this.txtLog.Size = new System.Drawing.Size(637, 22);
             this.txtLog.TabIndex = 7;
             // 
             // label1
