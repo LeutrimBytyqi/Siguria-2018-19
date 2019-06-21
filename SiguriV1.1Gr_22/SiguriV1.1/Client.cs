@@ -269,11 +269,10 @@ namespace SiguriV1._1
             //    }
             //    connection.Close();
             //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-        }
+            //c(Exception ex)
+             
+            }
+        
 
         private void WriteCol(string msg)
         {
