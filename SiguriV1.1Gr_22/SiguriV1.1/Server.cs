@@ -26,9 +26,6 @@ namespace SiguriV1._1
             InitializeComponent();
         }
         
-
-      
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             server = new UdpClient(int.Parse(txtServerPort.Text));
@@ -38,9 +35,6 @@ namespace SiguriV1._1
             thr.Start();
 
             btnStart.Enabled = false;
-
-          
-
 
         }
 
@@ -168,11 +162,7 @@ namespace SiguriV1._1
                     {
                         MessageBox.Show("Failed login");
                     }
-
-                    //catch (Exception ex)
-                    //{
-                    //    MessageBox.Show(ex.Message);
-                    //}
+ 
                     connection.Close();
                 }
 
