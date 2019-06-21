@@ -33,8 +33,6 @@ namespace SiguriV1._1
            = new MySqlConnection("datasource=localhost;" +
                "port=3306;database=employees;username=root;password=");
         MySqlCommand cmd;
-        private object clientCertificate;
-        //private byte[] encryptedKEY;
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -88,6 +86,7 @@ namespace SiguriV1._1
                     string txtPassSi = txtPassSI.Text;
 
                     client = new UdpClient(clientPort);
+                    signUpBtn.Enabled = false;
                 }
             }
             catch (Exception e1)
@@ -132,6 +131,7 @@ namespace SiguriV1._1
                 }
                 else
                 {
+                    
                     string txtNameSu = txtNameSU.Text;
                     string txtSurnameSu = txtSurnameSU.Text;
                     string txtEmailSu = txtEmailSU.Text;
@@ -139,8 +139,11 @@ namespace SiguriV1._1
                     double txtSalarySu = double.Parse(txtSalarySU.Text);
                     string txtGradeSu = txtGradeSU.Text;
                     string txtDeptNameSu = txtDeptNameSU.Text;
-
+                    signInBtn.Enabled = false;
                     client = new UdpClient(clientPort);
+
+
+
                 }
             }
             catch (Exception e1)
@@ -205,12 +208,15 @@ namespace SiguriV1._1
 
         private void signOutBtn_Click(object sender, EventArgs e)
         {
-            //txtSurnameInfo.Clear();
-            //txtEmailInfo.Clear();
-            //txtNameInfo.Clear();
-            //txtSalaryInfo.Clear();
-            //txtPassInfo.Clear();
-            //txtGradeInfo.Clear();               
+            txtSurnameSU.Clear();
+            txtEmailSU.Clear();
+            txtNameSU.Clear();
+            txtSalarySU.Clear();
+            txtPassSU.Clear();
+            txtGradeSU.Clear();
+            txtDeptNameSU.Clear();
+            messageClientTxt.Clear();
+            signInBtn.Enabled = true;
         }
 
         private void txtClientPort_TextChanged(object sender, EventArgs e)
