@@ -34,7 +34,7 @@ namespace SiguriV1._1
                "port=3306;database=employees;username=root;password=");
         MySqlCommand cmd;
         private object clientCertificate;
-        private byte[] encryptedKEY;
+        //private byte[] encryptedKEY;
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -84,7 +84,8 @@ namespace SiguriV1._1
                 }
                 else
                 {
-                    loginEncrypt();
+                    string txtEmailSi = txtEmailSI.Text;
+                    string txtPassSi = txtPassSI.Text;
 
                     client = new UdpClient(clientPort);
                 }
@@ -111,88 +112,10 @@ namespace SiguriV1._1
             WriteCol(msg);
 
 
-            //cmd = new MySqlCommand("select * from emp where email = @email and password = @password", connection);
-            //cmd.Parameters.AddWithValue("@email", txtEmailSI.Text);
-            //cmd.Parameters.AddWithValue("@password", txtPassSI.Text);
-            //connection.Open();
-            //MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
-            //DataSet dataSet = new DataSet();
-            //dataAdapter.Fill(dataSet);
-            //connection.Close();
-            //int count = dataSet.Tables[0].Rows.Count;
-            //if (count == 1)
-            //{
-            //    MessageBox.Show("Successfully login");
-
-
-
-            //ME U SHFAQ TE DHENAT SIPAS QATIJ EMAILI QE JEM LLOGIRAT PASI QE OSHT UNIQUE
-            //GABIM DIQKA!!
-            //try
-            //{
-            //    MySqlDataReader myReader = null;
-            //    cmd = new MySqlCommand("select * from emp where email = @email", connection);
-            //    cmd.Parameters.AddWithValue("@email", txtEmailSI.Text);
-            //    myReader = cmd.ExecuteReader();
-            //    if (myReader.HasRows)
-            //    {
-            //        while (myReader.Read())
-            //        {
-            //            txtNameInfo.Text = myReader.GetValue(1).ToString();
-            //            txtSurnameInfo.Text = myReader.GetValue(2).ToString();
-            //            txtEmailInfo.Text = myReader.GetValue(3).ToString();
-            //            txtPassInfo.Text = myReader.GetValue(4).ToString();
-            //            txtSalaryInfo.Text = myReader.GetInt32(5).ToString();
-            //            //txtSalarySU.Text = myReader.GetValue(4).ToString();
-            //            txtGradeInfo.Text = myReader.GetValue(6).ToString();
-            //        }
-            //        cmd.Dispose();
-
-            //    }
-            //}
-            //catch (Exception ex1)
-            //{
-            //    MessageBox.Show(ex1.Message);
-            //}
-
-            //}
-            //    else
-            //    {
-            //        MessageBox.Show("Failed login");
-            //    }
-
-            //}
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            //connection.Close();
+            
         }
 
-        private void loginEncrypt()
-        {
-            string txtEmailSi = txtEmailSI.Text;
-            string txtPassSi = txtPassSI.Text;
-
-            DESCryptoServiceProvider desObj = new DESCryptoServiceProvider();
-            desObj.GenerateKey();
-
-            desObj.GenerateIV();
-            desObj.Padding = PaddingMode.Zeros;
-            desObj.Mode = CipherMode.CBC;
-            KEY = desObj.Key;
-            IV = desObj.IV;
-
-            RSACryptoServiceProvider publicKeyProvider =
-            (RSACryptoServiceProvider)clientCertificate.PublicKey.Key;
-            encryptedKEY = publicKeyProvider.Encrypt(KEY, true);
-
-
-
-
-        }
+     
 
         private void signUpBtn_Click(object sender, EventArgs e)
         {
@@ -300,6 +223,11 @@ namespace SiguriV1._1
 
             
             //string y = x.ToString();
+
+        }
+
+        private void txtDeptNameSU_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

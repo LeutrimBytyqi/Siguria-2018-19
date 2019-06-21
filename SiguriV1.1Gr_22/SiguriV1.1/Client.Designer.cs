@@ -62,16 +62,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.signOutBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Dept = new System.Windows.Forms.Label();
             this.txtDeptNameSU = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(611, 61);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Location = new System.Drawing.Point(815, 75);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(83, 18);
+            this.btnSend.Size = new System.Drawing.Size(111, 22);
             this.btnSend.TabIndex = 0;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@
             // 
             // signUpBtn
             // 
-            this.signUpBtn.Location = new System.Drawing.Point(131, 366);
-            this.signUpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signUpBtn.Location = new System.Drawing.Point(175, 450);
+            this.signUpBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signUpBtn.Name = "signUpBtn";
-            this.signUpBtn.Size = new System.Drawing.Size(70, 27);
+            this.signUpBtn.Size = new System.Drawing.Size(93, 33);
             this.signUpBtn.TabIndex = 1;
             this.signUpBtn.Text = "Sign Up";
             this.signUpBtn.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // 
             // signInBtn
             // 
-            this.signInBtn.Location = new System.Drawing.Point(374, 271);
-            this.signInBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signInBtn.Location = new System.Drawing.Point(499, 334);
+            this.signInBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(68, 31);
+            this.signInBtn.Size = new System.Drawing.Size(91, 38);
             this.signInBtn.TabIndex = 2;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = true;
@@ -102,204 +102,192 @@
             // hostClientLbl
             // 
             this.hostClientLbl.AutoSize = true;
-            this.hostClientLbl.Location = new System.Drawing.Point(26, 16);
-            this.hostClientLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hostClientLbl.Location = new System.Drawing.Point(35, 20);
             this.hostClientLbl.Name = "hostClientLbl";
-            this.hostClientLbl.Size = new System.Drawing.Size(35, 13);
+            this.hostClientLbl.Size = new System.Drawing.Size(45, 17);
             this.hostClientLbl.TabIndex = 3;
             this.hostClientLbl.Text = "Host :";
             // 
             // portLbl
             // 
             this.portLbl.AutoSize = true;
-            this.portLbl.Location = new System.Drawing.Point(272, 21);
-            this.portLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.portLbl.Location = new System.Drawing.Point(363, 26);
             this.portLbl.Name = "portLbl";
-            this.portLbl.Size = new System.Drawing.Size(55, 13);
+            this.portLbl.Size = new System.Drawing.Size(73, 17);
             this.portLbl.TabIndex = 4;
             this.portLbl.Text = "Client Port";
             // 
             // txtClientPort
             // 
-            this.txtClientPort.Location = new System.Drawing.Point(330, 21);
-            this.txtClientPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClientPort.Location = new System.Drawing.Point(440, 26);
+            this.txtClientPort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClientPort.Name = "txtClientPort";
-            this.txtClientPort.Size = new System.Drawing.Size(146, 20);
+            this.txtClientPort.Size = new System.Drawing.Size(193, 22);
             this.txtClientPort.TabIndex = 6;
             this.txtClientPort.Text = "11000";
             this.txtClientPort.TextChanged += new System.EventHandler(this.txtClientPort_TextChanged);
             // 
             // messageClientTxt
             // 
-            this.messageClientTxt.Location = new System.Drawing.Point(587, 158);
-            this.messageClientTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.messageClientTxt.Location = new System.Drawing.Point(783, 194);
+            this.messageClientTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageClientTxt.Multiline = true;
             this.messageClientTxt.Name = "messageClientTxt";
-            this.messageClientTxt.Size = new System.Drawing.Size(146, 188);
+            this.messageClientTxt.Size = new System.Drawing.Size(193, 230);
             this.messageClientTxt.TabIndex = 7;
             // 
             // signUpLbl
             // 
             this.signUpLbl.AutoSize = true;
-            this.signUpLbl.Location = new System.Drawing.Point(26, 131);
-            this.signUpLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.signUpLbl.Location = new System.Drawing.Point(35, 161);
             this.signUpLbl.Name = "signUpLbl";
-            this.signUpLbl.Size = new System.Drawing.Size(183, 13);
+            this.signUpLbl.Size = new System.Drawing.Size(240, 17);
             this.signUpLbl.TabIndex = 8;
             this.signUpLbl.Text = "Sign Up if you don\'t have an account";
             // 
             // signInLbl
             // 
             this.signInLbl.AutoSize = true;
-            this.signInLbl.Location = new System.Drawing.Point(289, 131);
-            this.signInLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.signInLbl.Location = new System.Drawing.Point(385, 161);
             this.signInLbl.Name = "signInLbl";
-            this.signInLbl.Size = new System.Drawing.Size(189, 13);
+            this.signInLbl.Size = new System.Drawing.Size(249, 17);
             this.signInLbl.TabIndex = 9;
             this.signInLbl.Text = "Sign In if you already have an account";
             // 
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
-            this.nameLbl.Location = new System.Drawing.Point(3, 158);
-            this.nameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLbl.Location = new System.Drawing.Point(4, 194);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(41, 13);
+            this.nameLbl.Size = new System.Drawing.Size(53, 17);
             this.nameLbl.TabIndex = 10;
             this.nameLbl.Text = "Name :";
             // 
             // surnameLbl
             // 
             this.surnameLbl.AutoSize = true;
-            this.surnameLbl.Location = new System.Drawing.Point(1, 189);
-            this.surnameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.surnameLbl.Location = new System.Drawing.Point(1, 233);
             this.surnameLbl.Name = "surnameLbl";
-            this.surnameLbl.Size = new System.Drawing.Size(55, 13);
+            this.surnameLbl.Size = new System.Drawing.Size(73, 17);
             this.surnameLbl.TabIndex = 11;
             this.surnameLbl.Text = "Surname :";
             // 
             // emLbl
             // 
             this.emLbl.AutoSize = true;
-            this.emLbl.Location = new System.Drawing.Point(3, 218);
-            this.emLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emLbl.Location = new System.Drawing.Point(4, 268);
             this.emLbl.Name = "emLbl";
-            this.emLbl.Size = new System.Drawing.Size(38, 13);
+            this.emLbl.Size = new System.Drawing.Size(50, 17);
             this.emLbl.TabIndex = 12;
             this.emLbl.Text = "Email :";
             // 
             // pasLbl
             // 
             this.pasLbl.AutoSize = true;
-            this.pasLbl.Location = new System.Drawing.Point(1, 245);
-            this.pasLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pasLbl.Location = new System.Drawing.Point(1, 302);
             this.pasLbl.Name = "pasLbl";
-            this.pasLbl.Size = new System.Drawing.Size(59, 13);
+            this.pasLbl.Size = new System.Drawing.Size(77, 17);
             this.pasLbl.TabIndex = 13;
             this.pasLbl.Text = "Password :";
             // 
             // emailLbl
             // 
             this.emailLbl.AutoSize = true;
-            this.emailLbl.Location = new System.Drawing.Point(289, 163);
-            this.emailLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailLbl.Location = new System.Drawing.Point(385, 201);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(38, 13);
+            this.emailLbl.Size = new System.Drawing.Size(50, 17);
             this.emailLbl.TabIndex = 14;
             this.emailLbl.Text = "Email :";
             // 
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
-            this.passwordLbl.Location = new System.Drawing.Point(283, 232);
-            this.passwordLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.passwordLbl.Location = new System.Drawing.Point(377, 286);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(59, 13);
+            this.passwordLbl.Size = new System.Drawing.Size(77, 17);
             this.passwordLbl.TabIndex = 15;
             this.passwordLbl.Text = "Password :";
             // 
             // txtNameSU
             // 
-            this.txtNameSU.Location = new System.Drawing.Point(70, 156);
-            this.txtNameSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameSU.Location = new System.Drawing.Point(93, 192);
+            this.txtNameSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNameSU.Name = "txtNameSU";
-            this.txtNameSU.Size = new System.Drawing.Size(131, 20);
+            this.txtNameSU.Size = new System.Drawing.Size(173, 22);
             this.txtNameSU.TabIndex = 16;
             // 
             // txtSurnameSU
             // 
-            this.txtSurnameSU.Location = new System.Drawing.Point(70, 189);
-            this.txtSurnameSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurnameSU.Location = new System.Drawing.Point(93, 233);
+            this.txtSurnameSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSurnameSU.Name = "txtSurnameSU";
-            this.txtSurnameSU.Size = new System.Drawing.Size(131, 20);
+            this.txtSurnameSU.Size = new System.Drawing.Size(173, 22);
             this.txtSurnameSU.TabIndex = 17;
             // 
             // txtEmailSU
             // 
-            this.txtEmailSU.Location = new System.Drawing.Point(70, 218);
-            this.txtEmailSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailSU.Location = new System.Drawing.Point(93, 268);
+            this.txtEmailSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailSU.Name = "txtEmailSU";
-            this.txtEmailSU.Size = new System.Drawing.Size(131, 20);
+            this.txtEmailSU.Size = new System.Drawing.Size(173, 22);
             this.txtEmailSU.TabIndex = 18;
             // 
             // txtPassSU
             // 
-            this.txtPassSU.Location = new System.Drawing.Point(70, 245);
-            this.txtPassSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassSU.Location = new System.Drawing.Point(93, 302);
+            this.txtPassSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassSU.Name = "txtPassSU";
-            this.txtPassSU.Size = new System.Drawing.Size(131, 20);
+            this.txtPassSU.Size = new System.Drawing.Size(173, 22);
             this.txtPassSU.TabIndex = 19;
             // 
             // txtEmailSI
             // 
-            this.txtEmailSI.Location = new System.Drawing.Point(345, 163);
-            this.txtEmailSI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailSI.Location = new System.Drawing.Point(460, 201);
+            this.txtEmailSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailSI.Name = "txtEmailSI";
-            this.txtEmailSI.Size = new System.Drawing.Size(132, 20);
+            this.txtEmailSI.Size = new System.Drawing.Size(175, 22);
             this.txtEmailSI.TabIndex = 20;
             // 
             // txtPassSI
             // 
-            this.txtPassSI.Location = new System.Drawing.Point(345, 230);
-            this.txtPassSI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassSI.Location = new System.Drawing.Point(460, 283);
+            this.txtPassSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassSI.Name = "txtPassSI";
-            this.txtPassSI.Size = new System.Drawing.Size(132, 20);
+            this.txtPassSI.Size = new System.Drawing.Size(175, 22);
             this.txtPassSI.TabIndex = 21;
             // 
             // txtServerPort
             // 
-            this.txtServerPort.Location = new System.Drawing.Point(587, 19);
-            this.txtServerPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtServerPort.Location = new System.Drawing.Point(783, 23);
+            this.txtServerPort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServerPort.Name = "txtServerPort";
-            this.txtServerPort.Size = new System.Drawing.Size(146, 20);
+            this.txtServerPort.Size = new System.Drawing.Size(193, 22);
             this.txtServerPort.TabIndex = 22;
             this.txtServerPort.Text = "12000";
             // 
             // portServerCLbl
             // 
             this.portServerCLbl.AutoSize = true;
-            this.portServerCLbl.Location = new System.Drawing.Point(523, 21);
-            this.portServerCLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.portServerCLbl.Location = new System.Drawing.Point(697, 26);
             this.portServerCLbl.Name = "portServerCLbl";
-            this.portServerCLbl.Size = new System.Drawing.Size(60, 13);
+            this.portServerCLbl.Size = new System.Drawing.Size(80, 17);
             this.portServerCLbl.TabIndex = 23;
             this.portServerCLbl.Text = "Server Port";
             // 
             // txtMsg
             // 
-            this.txtMsg.Location = new System.Drawing.Point(95, 63);
-            this.txtMsg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMsg.Location = new System.Drawing.Point(127, 78);
+            this.txtMsg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMsg.Name = "txtMsg";
-            this.txtMsg.Size = new System.Drawing.Size(96, 20);
+            this.txtMsg.Size = new System.Drawing.Size(127, 22);
             this.txtMsg.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 25;
             this.label1.Text = "Kerkesa:";
             // 
@@ -307,73 +295,70 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(272, 67);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(363, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 26;
             this.label2.Text = "Rezultati:";
             // 
             // txtLog
             // 
-            this.txtLog.Location = new System.Drawing.Point(330, 61);
-            this.txtLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLog.Location = new System.Drawing.Point(440, 75);
+            this.txtLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(135, 20);
+            this.txtLog.Size = new System.Drawing.Size(179, 22);
             this.txtLog.TabIndex = 27;
             // 
             // txtHostname
             // 
             this.txtHostname.Enabled = false;
-            this.txtHostname.Location = new System.Drawing.Point(70, 16);
-            this.txtHostname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHostname.Location = new System.Drawing.Point(93, 20);
+            this.txtHostname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHostname.Name = "txtHostname";
-            this.txtHostname.Size = new System.Drawing.Size(141, 20);
+            this.txtHostname.Size = new System.Drawing.Size(187, 22);
             this.txtHostname.TabIndex = 28;
             this.txtHostname.Text = "localhost";
             // 
             // txtSalarySU
             // 
-            this.txtSalarySU.Location = new System.Drawing.Point(70, 275);
-            this.txtSalarySU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSalarySU.Location = new System.Drawing.Point(93, 338);
+            this.txtSalarySU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalarySU.Name = "txtSalarySU";
-            this.txtSalarySU.Size = new System.Drawing.Size(131, 20);
+            this.txtSalarySU.Size = new System.Drawing.Size(173, 22);
             this.txtSalarySU.TabIndex = 29;
             // 
             // txtGradeSU
             // 
-            this.txtGradeSU.Location = new System.Drawing.Point(70, 308);
-            this.txtGradeSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGradeSU.Location = new System.Drawing.Point(93, 379);
+            this.txtGradeSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGradeSU.Name = "txtGradeSU";
-            this.txtGradeSU.Size = new System.Drawing.Size(131, 20);
+            this.txtGradeSU.Size = new System.Drawing.Size(173, 22);
             this.txtGradeSU.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 280);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(4, 345);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 31;
             this.label3.Text = "Salary";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 311);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(4, 383);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 32;
             this.label4.Text = "Grade";
             // 
             // signOutBtn
             // 
-            this.signOutBtn.Location = new System.Drawing.Point(374, 316);
-            this.signOutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signOutBtn.Location = new System.Drawing.Point(499, 389);
+            this.signOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signOutBtn.Name = "signOutBtn";
-            this.signOutBtn.Size = new System.Drawing.Size(68, 29);
+            this.signOutBtn.Size = new System.Drawing.Size(91, 36);
             this.signOutBtn.TabIndex = 33;
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = true;
@@ -382,38 +367,36 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(596, 131);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(795, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 40;
             this.label5.Text = "Users Info";
             // 
-            // label6
+            // Dept
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 338);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Dept";
+            this.Dept.AutoSize = true;
+            this.Dept.Location = new System.Drawing.Point(4, 418);
+            this.Dept.Name = "Dept";
+            this.Dept.Size = new System.Drawing.Size(38, 17);
+            this.Dept.TabIndex = 42;
+            this.Dept.Text = "Dept";
             // 
             // txtDeptNameSU
             // 
-            this.txtDeptNameSU.Location = new System.Drawing.Point(70, 342);
-            this.txtDeptNameSU.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDeptNameSU.Location = new System.Drawing.Point(93, 414);
+            this.txtDeptNameSU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDeptNameSU.Name = "txtDeptNameSU";
-            this.txtDeptNameSU.Size = new System.Drawing.Size(131, 20);
-            this.txtDeptNameSU.TabIndex = 42;
+            this.txtDeptNameSU.Size = new System.Drawing.Size(173, 22);
+            this.txtDeptNameSU.TabIndex = 41;
             // 
             // Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 396);
+            this.ClientSize = new System.Drawing.Size(1017, 487);
+            this.Controls.Add(this.Dept);
             this.Controls.Add(this.txtDeptNameSU);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.label4);
@@ -448,7 +431,7 @@
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.btnSend);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Client";
             this.Text = "Client";
             this.ResumeLayout(false);
@@ -492,7 +475,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button signOutBtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Dept;
         private System.Windows.Forms.TextBox txtDeptNameSU;
     }
 }

@@ -112,7 +112,7 @@ namespace SiguriV1._1
                     DataSet dataSet = new DataSet();
                     dataAdapter.Fill(dataSet);
                    // connection.Close();
-                    string[] mes = new string[8];
+                    string[] mes = new string[9];
                     mes[0] = msg[0];
                     mes[1] = msg[1];
                     
