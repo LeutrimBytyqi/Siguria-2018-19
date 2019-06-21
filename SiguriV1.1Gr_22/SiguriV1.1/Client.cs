@@ -203,7 +203,7 @@ namespace SiguriV1._1
             try
             {
                 if (txtNameSU.Text == "" || txtSurnameSU.Text == "" || txtEmailSU.Text == "" || txtPassSU.Text == "" 
-                    || txtSalarySU.Text == "" || txtGradeSU.Text == "")
+                    || txtSalarySU.Text == "" || txtGradeSU.Text == "" || txtDeptNameSU.Text == "")
                 {
                     MessageBox.Show("Enter email and password");
                 }
@@ -215,6 +215,7 @@ namespace SiguriV1._1
                     string txtPassSu = txtPassSU.Text;
                     double txtSalarySu = double.Parse(txtSalarySU.Text);
                     string txtGradeSu = txtGradeSU.Text;
+                    string txtDeptNameSu = txtDeptNameSU.Text;
 
                     client = new UdpClient(clientPort);
                 }
@@ -226,7 +227,7 @@ namespace SiguriV1._1
             
             //portnumber.hostname.msg
             string msg = clientPort + "%" + hostName + "%" + txtNameSU.Text + "%" + txtSurnameSU.Text + "%" + txtEmailSU.Text + "%" + txtPassSU.Text
-                + "%" + txtSalarySU.Text + "%" + txtGradeSU.Text;
+                + "%" + txtSalarySU.Text + "%" + txtGradeSU.Text + "%" + txtDeptNameSU.Text;
             byte[] buffer = Encoding.Unicode.GetBytes(msg);
 
             //send

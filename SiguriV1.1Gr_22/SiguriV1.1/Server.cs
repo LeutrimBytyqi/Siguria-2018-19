@@ -54,7 +54,7 @@ namespace SiguriV1._1
                 string[] msg = Encoding.Unicode.GetString(buffer).Split('%');
                 StringBuilder palidhje = new StringBuilder();
 
-                if (msg.Length == 8)
+                if (msg.Length == 9)
                 {
 
                     connection.Open();
@@ -64,10 +64,10 @@ namespace SiguriV1._1
                     WriteLog(" Password :" + msg[5]);
                     WriteLog(" Salary :" + msg[6]);
                     WriteLog(" Grade :" + msg[7]);
-
+                    WriteLog(" DeptName:" + msg[8]);
                     string insertQuery = "insert into emp" +
-                        "(name, surname, email, password, salary, grade) " +
-                        "values (@name, @surname, @email, @password, @salary, @grade) ";
+                        "(name, surname, email, password, salary, grade, deptName) " +
+                        "values (@name, @surname, @email, @password, @salary, @grade, @deptName) ";
 
                     cmd = new MySqlCommand(insertQuery, connection);
                     cmd.Parameters.AddWithValue("@name", msg[2]);
@@ -76,6 +76,7 @@ namespace SiguriV1._1
                     cmd.Parameters.AddWithValue("@password", msg[5]);
                     cmd.Parameters.AddWithValue("@salary", msg[6]);
                     cmd.Parameters.AddWithValue("@grade", msg[7]);
+                    cmd.Parameters.AddWithValue("@deptName", msg[8]);
 
                     for (int i = 2; i < msg.Length; i++)
                     {
@@ -144,6 +145,7 @@ namespace SiguriV1._1
                                     mes[5] = myReader.GetValue(4).ToString();
                                     mes[6] = myReader.GetInt32(5).ToString();
                                     mes[7] = myReader.GetValue(6).ToString();
+                                    mes[8] = myReader.GetValue(7).ToString();
                                 }
                                 cmd.Dispose();
 

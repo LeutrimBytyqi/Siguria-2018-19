@@ -41,3 +41,12 @@ C:\wamp64\www\Siguri\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\Siguri
 C:\wamp64\www\Siguri\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.CopyComplete
 C:\wamp64\www\Siguri\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.exe
 C:\wamp64\www\Siguri\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.pdb
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csprojAssemblyReference.cache
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Client.resources
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Form1.resources
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Properties.Resources.resources
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1._1.Server.resources
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.GenerateResource.cache
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.exe
+C:\wamp64\www\Siguria-2018-19\SiguriV1.1Gr_22\SiguriV1.1\obj\Debug\SiguriV1.1.pdb
